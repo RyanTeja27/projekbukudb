@@ -70,6 +70,13 @@ func TambahBuku(db *gorm.DB) {
 			return
 		}
 
+		fmt.Print("Masukan  Jumlah Stock : ")
+		_, err = fmt.Scanln(&stock)
+		if err != nil {
+			fmt.Println("Terjadi Error:", err)
+			return
+		}
+
 		draftBuku = append(draftBuku, model.Buku{
 			ISBN:      isbn,
 			Judul:     JudulB,
@@ -209,6 +216,7 @@ func DetailBuku(db *gorm.DB, ID uint) {
 	fmt.Printf("Pengarang Buku : %s\n", buku.Pengarang)
 	fmt.Printf("Tahun Terbit Buku : %d\n", buku.Tahun)
 	fmt.Printf("Gambar : %s\n", buku.Gambar)
+	fmt.Printf("Stock Buku : %d\n", buku.Stok)
 
 }
 
@@ -408,27 +416,3 @@ func main() {
 
 	main()
 }
-
-// Fitur pada apliaksi :
-// 1.Menambah buku baru dengan informasi
-// -Kode Buku string
-// -Judul Buku string
-// -Pengarang string
-// -Penerbit string
-// -Jumlah Halaman int
-// -Tahun Terbit int
-// 2.Menampilkan semua list pada daftar buku di perpustakaan
-// 3.Dapat menghapus buku menggunakan Kode Buku
-// 4.Dapat mengubah/mengedit buku berdasarkan Kode Buku
-
-// // Fitur pada apliaksi :
-// // 1.Menambah buku baru dengan informasi
-// // -Kode Buku string
-// // -Judul Buku string
-// // -Pengarang string
-// // -Penerbit string
-// // -Jumlah Halaman int
-// // -Tahun Terbit int
-// // 2.Menampilkan semua list pada daftar buku di perpustakaan
-// // 3.Dapat menghapus buku menggunakan Kode Buku
-// // 4.Dapat mengubah/mengedit buku berdasarkan Kode Buku
