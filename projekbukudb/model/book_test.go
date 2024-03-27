@@ -61,7 +61,7 @@ func TestGetAll(t *testing.T) {
 		Pengarang: "Ryan Teja",
 		Tahun:     2007,
 		Judul:     "a",
-		Gambar:    "abc",
+		Gambar:    "abc.jpg",
 		Stok:      25,
 	}
 
@@ -85,7 +85,7 @@ func TestUpdateByID(t *testing.T) {
 		Pengarang: "Teja",
 		Tahun:     20124,
 		Judul:     "bebek",
-		Gambar:    "panggang",
+		Gambar:    "panggang.jpg",
 		Stok:      200,
 	}
 
@@ -104,11 +104,11 @@ func TestDeleteByID(t *testing.T) {
 	Init()
 
 	libraryData := model.Buku{
-		ISBN:      "QWE12",
-		Pengarang: "Jajang Suherman",
-		Tahun:     2019,
-		Judul:     "Spiderman",
-		Gambar:    "man.png",
+		ISBN:      "1567",
+		Pengarang: "Pande KEce",
+		Tahun:     2025,
+		Judul:     "Pace",
+		Gambar:    "Pande Celana",
 		Stok:      120,
 	}
 
